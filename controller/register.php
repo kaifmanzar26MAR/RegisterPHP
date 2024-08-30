@@ -9,10 +9,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' ) {
     $userId = htmlspecialchars($_POST['userId']);
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
-    $contact = htmlspecialchars($_POST['contact']);
+    $contact = $_POST['contact'];
     $address = htmlspecialchars($_POST['address']);
     $userImage = "";
     $currTime = time();
+    // echo $contact;
+    // die();
     if(isset($_FILES['file'])){
         $file = $_FILES['file']; 
         $uploadDir="uploads/";
@@ -44,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' ) {
         die();
     }
 
-    $sql = "INSERT INTO user (userId, name, email, contact, address, userImage, createdAt) 
+    $sql = "INSERT INTO user (`userId`, `name`, `email`, `contact`, `address`, `userImage`, `createdAt`) 
         VALUES ('$userId', '$name', '$email', '$contact', '$address', '$userImage', CURRENT_TIMESTAMP)";
 
     if ($conn->query($sql) === true) {

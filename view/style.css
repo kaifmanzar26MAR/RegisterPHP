@@ -1,0 +1,164 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav_container{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.nav_container a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.main{
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background:linear-gradient(rgb(138, 240, 221), rgb(29, 243, 133));
+}
+
+.main .container{
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.241);
+    backdrop-filter: blur(50px);
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 10px 10px 10px  rgba(129, 128, 128, 0.504);
+}
+
+.bubble{
+    position: absolute;
+    border-radius: 50% 50%;
+}
+#one{
+    width: 200px;
+    height: 200px;
+    background-color: greenyellow;
+    box-shadow: 0 0 15px 7px greenyellow;
+    top: 20px;
+    right: 30vw;
+}
+#two{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(185, 94, 250);
+    box-shadow: 0 0 12px 8px rgb(185, 94, 250);
+    top: 400px;
+    left: 30%;
+}
+
+.modal{
+    width: 100vw;
+    height:100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(212, 212, 212, 0.641);
+
+}
+.modal .con_box{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+.modal .con_box .con_message{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
+.modal .con_box .buttons{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.modal .con_box .buttons button{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+#cancel{
+    background-color: black;
+}
+#confirm{
+    background-color: green;
+}
+
+#form{
+    width: 100%;
+    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+#form input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 17px;
+}
+
+.userIddiv{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 17px;
+    background: rgb(230, 230, 230);
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: 500;
+    cursor: not-allowed;
+
+}
+
+#edit{
+    cursor: pointer;
+}
+
+#selectedImage{
+    background-color: rgba(65, 190, 239, 0.777);
+    color:black;
+    font-weight: bold;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
